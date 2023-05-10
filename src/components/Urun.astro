@@ -1,0 +1,46 @@
+---
+
+export interface Props {
+    baslik?: string;
+    fiyat?: string;
+    resim?: string;
+    link?: string;
+    indirimliFiyat?: string;
+    
+}
+const randomFiyat = Math.floor(Math.random() * 1000);
+
+const indirimliFiyatm = randomFiyat - Math.floor(Math.random() * 100)
+
+const { baslik="Product Name", fiyat=randomFiyat, indirimliFiyat=indirimliFiyatm, resim="https://dummyimage.com/450x300/dee2e6/6c757d.jpg", link } = Astro.props;
+---
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Sale badge-->
+        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Satılık</div>
+        <!-- Product image-->
+        <img class="card-img-top" src={resim} alt="..." />
+        <!-- Product details-->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">{baslik}</h5>
+                <!-- Product reviews-->
+                <div class="d-flex justify-content-center small text-warning mb-2">
+                    <div class="bi-star-fill"></div>
+                    <div class="bi-star-fill"></div>
+                    <div class="bi-star-fill"></div>
+                    <div class="bi-star-fill"></div>
+                    <div class="bi-star-fill"></div>
+                </div>
+                <!-- Product price-->
+                <span class="text-muted text-decoration-line-through">₺{fiyat+100}</span>
+                ₺{indirimliFiyat+100}
+            </div>
+        </div>
+        <!-- Product actions-->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/sort">Add to cart</a></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "name": "nt90210000172",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.2.1",
+    "@astrojs/react": "^2.1.1",
+    "@astrojs/vue": "^2.1.1",
+    "@types/alpinejs": "^3.7.1",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "alpinejs": "^3.12.0",
+    "astro": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.5.0",
+    "three": "^0.151.3",
+    "vue": "^3.2.47"
+  }
+}

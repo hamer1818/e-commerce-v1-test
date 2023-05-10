@@ -1,0 +1,15 @@
+---
+export interface Props{
+    baslik?: string;
+}
+const {baslik4} = Astro.props;
+import Urunler from "./Urunler2.astro";
+import Urun from "./Urun.astro";
+---
+
+<Urunler baslik={baslik4}>
+    <Urun/>
+    <Urun/>
+    <Urun/>
+    <Urun/>
+</Urunler>

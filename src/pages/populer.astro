@@ -1,0 +1,13 @@
+---
+import Populer from "../components/Populer.vue";
+import Layout from "../layouts/Layout.astro";
+import Urunler from "../components/Urunler.astro";
+import Urun4 from "../components/Urun4.astro";
+---
+<Layout>
+  <Populer client:load>
+    <!-- <Urunler baslik=""> -->
+    <Urun4 baslik4="Popüler Ürünler"/>
+  <!-- </Urunler> -->
+  </Populer>
+</Layout>
